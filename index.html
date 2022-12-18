@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Label Generator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- ////// FILTER ///// -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="svgfilter">
+          <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turbulence" />
+          <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="40" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+    </svg>
+    <!-- ////// END OF FILTER ///// -->
+
+    <div class="label-wrapper">
+    
+      <!-- ////// FORM ///// -->
+      <div class="form" id="form">
+        <h1>LABEL GENERATOR</h1>
+      </div>
+      <!-- ////// End of FORM ///// -->
+
+      <!-- ////// SMOKE ///// -->
+      <div class="label-container">
+        <div class="gradient" id="gradient"></div>
+        <div class="canvas-container" id="canvasContainer"></div>
+      </div>
+      <!-- ////// End of SMOKE ///// -->
+
+      <!-- ////// TEXT ///// -->
+      <div class="label-container label-container-text">
+        <div class="strain-info" id="strainName">
+          <!-- <h2>PURPLE HAZE</h2> -->
+        </div>
+        <div class="strain-info" id="strainType">
+          <!-- <h3>Strain: Hybrid</h3> -->
+          <!-- <h3>THC: 26.5%</h3> -->
+        </div>
+      </div>
+      <!-- ////// End of TEXT ///// -->
+    </div>
+
+    <!-- p5 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <!-- sketch -->
+    <script src="sketch.js" async defer></script>
+  </body>
+</html>
