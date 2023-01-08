@@ -38,16 +38,19 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
-
-.form {
+.form-container {
+  background: black;
+  display: grid;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
   width: 400px;
   height: 100vh;
-  background: black;
+  align-items: center;
+}
+.form {
   z-index: 1;
   padding: 3rem;
+  padding-top: 5rem;
   transition: .5s;
 }
 .form h1 {
@@ -56,11 +59,15 @@ h3 {
 }
 .form div {
   padding-bottom: 3rem;
-  font-size: .8rem;
+  font-size: .7rem;
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: .15rem;
   color: rgb(128, 128, 128);
 }
+.form div:not(.text-input-label) {
+  margin-top: .1rem;
+}
+
 .form button {
   width: calc(50% - 2.5px);
   font-family: inherit;
@@ -69,8 +76,11 @@ h3 {
   color: rgb(255, 255, 255);
   padding: 1rem 0;
   display: inline-block;
-  font-size: 1rem;
+  font-size: .875rem;
   transition: 100ms;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+
 }
 .form button:first-of-type {
   margin-right: 5px;
@@ -83,6 +93,12 @@ h3 {
 .form button:active {
   background-color: #adadad;
   color: white;
+}
+#footer {
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-top: 4rem;
+  color: rgb(80, 80, 80);
 }
 
 input {
@@ -109,13 +125,14 @@ input[type=text] {
 #strainRadio {
   display: flex;
   justify-content: space-between;
-  padding-bottom: .7rem;
+  padding-bottom: .6rem;
   font-size: .875rem;
   color: white;
 }
 #strainRadio span {
   margin-left: 5px;
   cursor: pointer;
+  letter-spacing: .03rem;
 }
 
 input[type="radio"] {
@@ -244,26 +261,8 @@ input[type="range"]::-moz-range-thumb:hover {
   position: fixed;
   z-index: 1;
 
-  /* //////// Colors ///////// */
-  background: linear-gradient(rgb(228, 228, 147), rgb(144, 0, 255));
-
-  /* purple */
-  background: linear-gradient(rgb(194, 194, 194), rgb(162, 22, 255));
-  /* blue */
-  background: linear-gradient(rgb(194, 194, 194), rgb(22, 170, 255));
-  /* red */
-  background: linear-gradient(rgb(194, 194, 194), rgb(255, 14, 227));
-
-  /* //////// BLEND MODES //////// */
+  /* //////// BLEND MODE //////// */
   mix-blend-mode: color;
-  /* mix-blend-mode: multiply; */
-  /* mix-blend-mode: exclusion; */
-
-  /* mix-blend-mode: difference; */
-
-  /* mix-blend-mode: hue; */
-  /* mix-blend-mode: luminosity; */
-  /* mix-blend-mode: darken; */
 }
 
 .gradient2 {
